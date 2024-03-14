@@ -20,9 +20,7 @@ $errorAction="SilentlyContinue"
 echo "
 ----------------------------------------------------------------------------
 Guessing the registry keys of your USB storage devices
-
 The CurrentControlSet can also be ControlSet001, ControlSet002 ...
-
 "
 
 # -------------------------------------------------------------
