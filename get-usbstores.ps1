@@ -8,6 +8,10 @@ $help = @"
 "REGISTRY::HKEY_LOCAL_MACHINE" = "HKEY_LOCAL_MACHINE" = "HKLM:"
 "@
 
+$helpUSBSTOR = @"
+"USBSTOR refers to USB device with storage functional.
+"@
+
 # -------------------------------------------------------------
 # Setup
 $setName = "ControlSet001"
