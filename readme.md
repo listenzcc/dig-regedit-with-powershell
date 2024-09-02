@@ -6,6 +6,8 @@ Windows注册表是系统和应用程序配置的关键存储库。它由键（k
 
 ---
 
+[toc]
+
 ## Windows注册表的树型结构
 
 在Windows注册表中，术语"项"（key）、"键"（subkey）和"值"（value）用于描述注册表的组织结构和内容。它们的含义如下：
@@ -14,13 +16,14 @@ Windows注册表是系统和应用程序配置的关键存储库。它由键（k
 
 - 在注册表中，项是顶级元素，类似于文件系统中的文件夹。每个项可以包含多个子项和/或值。注册表路径以根键开始，比如`HKEY_LOCAL_MACHINE`或`HKEY_CURRENT_USER`，然后依次向下划分为多个项，形成树状结构。
 
-```powershell
-"REGISTRY::HKEY_CLASSES_ROOT" = "HKEY_CLASSES_ROOT" = "HKCR:"
-"REGISTRY::HKEY_CURRENT_CONFIG" = "HKEY_CURRENT_CONFIG" = "HKCC:"
-"REGISTRY::HKEY_USERS" = "HKEY_USERS" = "HKU:"
-"REGISTRY::HKEY_CURRENT_USER" = "HKEY_CURRENT_USER" = "HKCU:"
-"REGISTRY::HKEY_LOCAL_MACHINE" = "HKEY_LOCAL_MACHINE" = "HKLM:"
-```
+    ```powershell
+    # Alias for Register path prefix
+    "REGISTRY::HKEY_CLASSES_ROOT" = "HKEY_CLASSES_ROOT" = "HKCR:"
+    "REGISTRY::HKEY_CURRENT_CONFIG" = "HKEY_CURRENT_CONFIG" = "HKCC:"
+    "REGISTRY::HKEY_USERS" = "HKEY_USERS" = "HKU:"
+    "REGISTRY::HKEY_CURRENT_USER" = "HKEY_CURRENT_USER" = "HKCU:"
+    "REGISTRY::HKEY_LOCAL_MACHINE" = "HKEY_LOCAL_MACHINE" = "HKLM:"
+    ```
 
 **键（Subkey）**：
 
@@ -93,10 +96,9 @@ GUID（Globally Unique Identifier，全球唯一标识符）是一种128位的�
 PSTools是Sysinternals Suite的一部分，它提供了一组强大的命令行实用工具，可用于执行各种系统管理任务，包括对注册表的操作。要以系统权限操作注册表，你可以使用PSTools中的PsExec工具，以下是基本步骤：
 
 1. **下载并解压PSTools**：
-首先，从Sysinternals Suite的官方网站下载PSTools工具
-    
-    [](https://download.sysinternals.com/files/PSTools.zip)
-    
+首先，从Sysinternals Suite的官方网站下载[PSTools工具](
+    https://download.sysinternals.com/files/PSTools.zip "PSTools工具")
+
 2. **以系统权限运行命令行**：
 打开命令提示符（cmd.exe），右键单击并选择“以管理员身份运行”，以确保以管理员权限打开命令提示符。
 
